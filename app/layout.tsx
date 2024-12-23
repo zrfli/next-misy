@@ -22,7 +22,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <Header />
           <DashboardSideBar />
-          <React.Fragment>{children}</React.Fragment>
+          <React.Fragment>
+            <main className="md:ml-64">{children}</main>
+          </React.Fragment>
         </ThemeProvider>
       </body>
     </html>
