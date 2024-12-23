@@ -7,43 +7,32 @@ export default async function Home () {
                 <div className="flex flex-col bg-white border shadow-sm rounded-xl">
                     <div className="p-4 md:p-5 flex justify-between gap-x-3">
                         <div>
-                            <p className="text-xs uppercase tracking-wide text-gray-500">Total users</p>
+                            <p className="text-xs uppercase tracking-wide text-neutral-800 font-semibold">Aktif Akademik Dönem Bilgileri</p>
                             <div className="mt-1 flex items-center gap-x-2">
-                                <h3 className="text-xl sm:text-2xl font-medium text-gray-800">72,540</h3>
+                                <h3 className="text-sm font-medium text-neutral-600">2024-2025 Güz</h3>
                             </div>
                         </div>
                     </div>
-                    <a className="py-3 px-4 md:px-5 inline-flex justify-between items-center text-sm text-gray-600 border-t border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-b-xl" href="#">
-                        View reports
-                    </a>
                 </div>
-
                 <div className="flex flex-col bg-white border shadow-sm rounded-xl">
                     <div className="p-4 md:p-5 flex justify-between gap-x-3">
                         <div>
-                            <p className="text-xs uppercase tracking-wide text-gray-500">Total users</p>
+                            <p className="text-xs uppercase tracking-wide text-neutral-800 font-semibold">Danışman Bilgileri</p>
                             <div className="mt-1 flex items-center gap-x-2">
-                                <h3 className="text-xl sm:text-2xl font-medium text-gray-800">72,540</h3>
+                                <h3 className="text-sm font-medium text-neutral-600">Dr.Öğr.Üyesi NUR GÖZDE TAYFUR</h3>
                             </div>
                         </div>
                     </div>
-                    <a className="py-3 px-4 md:px-5 inline-flex justify-between items-center text-sm text-gray-600 border-t border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-b-xl" href="#">
-                        View reports
-                    </a>
                 </div>
-
                 <div className="flex flex-col bg-white border shadow-sm rounded-xl">
                     <div className="p-4 md:p-5 flex justify-between gap-x-3">
                         <div>
-                            <p className="text-xs uppercase tracking-wide text-gray-500">Total users</p>
+                            <p className="text-xs uppercase tracking-wide text-neutral-800 font-semibold">Öğrenim Bilgileri</p>
                             <div className="mt-1 flex items-center gap-x-2">
-                                <h3 className="text-xl sm:text-2xl font-medium text-gray-800">72,540</h3>
+                                <h3 className="text-sm font-medium text-neutral-600">MESLEK YÜKSEKOKULU/Halkla İlişkiler ve Tanıtım</h3>
                             </div>
                         </div>
                     </div>
-                    <a className="py-3 px-4 md:px-5 inline-flex justify-between items-center text-sm text-gray-600 border-t border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-b-xl" href="#">
-                        View reports
-                    </a>
                 </div>
             </div>
         </div>

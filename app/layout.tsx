@@ -3,8 +3,8 @@ import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
-import { DashboardSideBar } from "@/components/(dashboard)/(layouts)/sidebar";
-import Header from "@/components/Header";
+import { DashboardSideBar } from "@/components/(layouts)/sidebar";
+import Header from "@/components/(layouts)/Header";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });

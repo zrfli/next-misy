@@ -3,7 +3,7 @@
 import React from "react";
 import { Navbar, NavbarContent } from "@nextui-org/react";
 import { Logo } from "@/components/logo";
-import { AvatarCard } from "@/components/(dashboard)/avatar";
+import { AvatarCard } from "@/components/(layouts)/Avatar";
 
 export default async function DashboardHeader() {
 
