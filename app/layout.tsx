@@ -3,7 +3,7 @@ import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
-import { DashboardSideBar } from "@/components/(layouts)/sidebar";
+import { DashboardSideBar } from "@/components/(layouts)/(sidebar)/Sidebar";
 import Header from "@/components/(layouts)/Header";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Header />
           <DashboardSideBar />
           <React.Fragment>
-            <main className="md:ml-64">{children}</main>
+            <main className="md:ml-64 mt-10">{children}</main>
           </React.Fragment>
         </ThemeProvider>
       </body>

@@ -1,6 +1,6 @@
 "use server"
 
-const notesData = [
+const lessonsData = [
   {
     id: 0,
     class: "1. Sınıf",
@@ -103,33 +103,31 @@ const notesData = [
   },
 ]
 
-function NoteCard({ note }: { note: typeof notesData[0] }) {
+function LessonCard({ lesson }: { lesson: typeof lessonsData[0] }) {
   return (
-    <div className="flex flex-col rounded-xl bg-white dark:bg-black shadow-sm border border-neutral-300 dark:border-neutral-600">
-      <div className={`flex justify-between items-center rounded-t-xl border-b px-3 py-3 ${note?.again ? 'bg-yellow-200/75 border-yellow-300' : 'bg-neutral-200 border-neutral-300'}`}>
-        <span className="text-sm font-medium text-neutral-800">{note.class} - {note.code} - {note.type}</span>
-      </div>
-      <div className="p-3">
-        <span className="font-medium text-neutral-800 dark:text-white">{note.courseName}</span>
-        <p className="text-neutral-800 text-xs dark:text-neutral-400">{note.instructor}</p>
-        <p className="mt-2 dark:text-neutral-300 text-neutral-600 text-xs font-medium">Vize<span className="inline-block align-text-top" style={{ lineHeight: '0.5rem', fontSize: '0.50rem' }}>(%40)</span>: {note.midterm}</p>
-        <p className="mt-1 dark:text-neutral-300 text-neutral-600 text-xs font-medium">Final<span className="inline-block align-text-top" style={{ lineHeight: '0.5rem', fontSize: '0.50rem' }}>(%60)</span>: {note.final}</p>
-        <span className="mt-3 inline-flex cursor-pointer items-center gap-x-1 rounded-lg border border-transparent text-xs font-semibold text-blue-500 hover:text-blue-800 disabled:pointer-events-none disabled:opacity-50">Detaylar</span>
-      </div>
+    <div className="flex flex-col rounded-xl bg-white shadow-sm border">
+        <div className={`flex justify-between items-center rounded-t-xl border-b px-3 py-3 ${lesson?.again ? 'bg-yellow-200/75 border-yellow-300' : 'bg-neutral-200 border-neutral-300'}`}>
+            <span className="text-sm font-medium text-neutral-800">{lesson.class} - {lesson.code} - {lesson.type}</span>
+            <span className="inline-flex items-center rounded border border-neutral-500 '.$bg_color.' px-2.5 py-0.5 text-xs font-semibold text-neutral-800">{lesson.grade}</span>
+        </div>
+        <div className="p-3">
+            <span className="font-medium text-neutral-800">{lesson.courseName}</span>
+            <p className="text-neutral-800 text-xs">{lesson.instructor}</p>
+        </div>
     </div>
   )
 }
 
-export default async function Notes() {
+export default async function Lessons() {
   return (
     <>
       <div className="ml-4">
-        <h3 className="text-xl font-semibold">Notlar</h3>
-        <p className="text-sm text-neutral-600">Bu bölümdeki notlar, sistemdeki önemli bilgileri ve güncellemeleri içermektedir.</p>
+        <h3 className="text-xl font-semibold">Derslerim</h3>
+        <p className="text-sm text-neutral-600">Dönem içerisinde alınan dersler.</p>
       </div>
       <div className="p-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
-        {notesData.map(note => (
-          <NoteCard key={note.id} note={note} />
+        {lessonsData.map(lesson => (
+          <LessonCard key={lesson.id} lesson={lesson} />
         ))}
       </div>    
     </>
