@@ -1,10 +1,12 @@
 "use server"
 
+import { NoteDetails } from "@/components/(sheet)/NoteDetails"
+
 const notesData = [
   {
     id: 0,
     class: "1. Sınıf",
-    code: "MHIT201",
+    code: "MHIT124",
     type: "Alttan",
     courseName: "Halkla İlişkilere Giriş",
     instructor: "Dr.Öğr.Üyesi NUR GÖZDE TAYFUR",
@@ -113,8 +115,8 @@ function NoteCard({ note }: { note: typeof notesData[0] }) {
         <span className="font-medium text-neutral-800 dark:text-white">{note.courseName}</span>
         <p className="text-neutral-800 text-xs dark:text-neutral-400">{note.instructor}</p>
         <p className="mt-2 dark:text-neutral-300 text-neutral-600 text-xs font-medium">Vize<span className="inline-block align-text-top" style={{ lineHeight: '0.5rem', fontSize: '0.50rem' }}>(%40)</span>: {note.midterm}</p>
-        <p className="mt-1 dark:text-neutral-300 text-neutral-600 text-xs font-medium">Final<span className="inline-block align-text-top" style={{ lineHeight: '0.5rem', fontSize: '0.50rem' }}>(%60)</span>: {note.final}</p>
-        <span className="mt-3 inline-flex cursor-pointer items-center gap-x-1 rounded-lg border border-transparent text-xs font-semibold text-blue-500 hover:text-blue-800 disabled:pointer-events-none disabled:opacity-50">Detaylar</span>
+        <p className="mt-1 mb-1 dark:text-neutral-300 text-neutral-600 text-xs font-medium">Final<span className="inline-block align-text-top" style={{ lineHeight: '0.5rem', fontSize: '0.50rem' }}>(%60)</span>: {note.final}</p>
+        <NoteDetails Lesson={note} />
       </div>
     </div>
   )

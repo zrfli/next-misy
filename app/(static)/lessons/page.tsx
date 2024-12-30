@@ -105,7 +105,7 @@ const lessonsData = [
 
 function LessonCard({ lesson }: { lesson: typeof lessonsData[0] }) {
   return (
-    <div className="flex flex-col rounded-xl bg-white shadow-sm border">
+    <div className="flex flex-col rounded-xl bg-white shadow-sm border border-neutral-300">
         <div className={`flex justify-between items-center rounded-t-xl border-b px-3 py-3 ${lesson?.again ? 'bg-yellow-200/75 border-yellow-300' : 'bg-neutral-200 border-neutral-300'}`}>
             <span className="text-sm font-medium text-neutral-800">{lesson.class} - {lesson.code} - {lesson.type}</span>
             <span className="inline-flex items-center rounded border border-neutral-500 '.$bg_color.' px-2.5 py-0.5 text-xs font-semibold text-neutral-800">{lesson.grade}</span>
