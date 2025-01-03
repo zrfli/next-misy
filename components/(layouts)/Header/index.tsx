@@ -30,7 +30,7 @@ export default async function DashboardHeader() {
   ];
 
   return (
-    <Navbar disableAnimation={true} isBordered={true} isBlurred={true} className="border-b border-neutral-300" maxWidth="full">
+    <Navbar disableAnimation={true} isBordered={true} isBlurred={true} className="lg:py-2 border-b border-neutral-300" maxWidth="full">
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
@@ -45,7 +45,7 @@ export default async function DashboardHeader() {
 
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={index}>
             {item.link && (<Link className="w-full" href={item.link}>{item.name}</Link>)}
           </NavbarMenuItem>
         ))}

@@ -1,6 +1,6 @@
 "use server"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
     CreditCard,
     LogOut,
@@ -22,7 +22,6 @@ export async function AvatarCard() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Avatar className="border border-neutral-400 dark:border-neutral-300 cursor-pointer">
-            <AvatarImage src="/misy.jpg" className="object-cover w-full h-full" height={100} width={100} alt="" loading="lazy" decoding="async" />
             <AvatarFallback>ZSK</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>

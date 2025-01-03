@@ -1,7 +1,6 @@
 "use client"
 
-import * as React from "react"
-
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -15,7 +14,7 @@ import {
 import { MdLanguage } from "react-icons/md"
 
 export function LanguageDropDownMenu() {
-  const [position, setPosition] = React.useState("turkish")
+  const [position, setPosition] = useState("turkish")
 
   return (
     <DropdownMenu>

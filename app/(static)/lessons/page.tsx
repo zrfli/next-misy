@@ -103,14 +103,14 @@ const lessonsData = [
   },
 ]
 
-function LessonCard({ lesson }: { lesson: typeof lessonsData[0] }) {
+async function LessonCard({ lesson }: { lesson: typeof lessonsData[0] }) {
   return (
     <div className="flex flex-col rounded-xl bg-white shadow-sm border border-neutral-300">
-        <div className={`flex justify-between items-center rounded-t-xl border-b px-3 py-3 ${lesson?.again ? 'bg-yellow-200/75 border-yellow-300' : 'bg-neutral-200 border-neutral-300'}`}>
+        <div className={`flex justify-between items-center rounded-t-xl border-b px-2 py-2 ${lesson?.again ? 'bg-yellow-200/75 border-yellow-300' : 'bg-neutral-200 border-neutral-300'}`}>
             <span className="text-sm font-medium text-neutral-800">{lesson.class} - {lesson.code} - {lesson.type}</span>
             <span className="inline-flex items-center rounded border border-neutral-500 '.$bg_color.' px-2.5 py-0.5 text-xs font-semibold text-neutral-800">{lesson.grade}</span>
         </div>
-        <div className="p-3">
+        <div className="p-2">
             <span className="font-medium text-neutral-800">{lesson.courseName}</span>
             <p className="text-neutral-800 text-xs">{lesson.instructor}</p>
         </div>
