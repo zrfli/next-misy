@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import LogoPath from "@/public/logo.svg";
+import LogoPath from "@/public/logo.png";
 
 interface LogoProps { LogoClass?: string }
 
