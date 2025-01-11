@@ -3,8 +3,8 @@
 import { AuthFormSkeleton } from "@/components/ui/skeleton";
 import { Maintenance } from "@/components/maintenance";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { TiLockClosedOutline } from "react-icons/ti";
+import ServiceAuth from "../Sheets/Service-Auth";
 
 const authEnabled:boolean = true;
 
@@ -14,27 +14,18 @@ const authMethod = [
         serviceText: 'e-Devlet ile Giriş',
         serviceLogo: '/img/auth/icon/e-devlet-icon.svg',
         serviceActive: true,
-        category: 'service'
+        category: 'service',
+        serviceDescription: 'e-Devlet hesabınızla hızlı ve güvenli giriş yapabilirsiniz.'
     },
     {
         serviceName: 'mobile-qr',
         serviceText: 'Mobil (QR) ile Giriş',
         serviceLogo: '/img/auth/icon/mobile-qr-auth-icon.svg',
         serviceActive: true,
-        category: 'service'
+        category: 'service',
+        serviceDescription: 'QR kodu ile mobil cihazlardan kolayca giriş yapın.'
     }
 ]
-
-function AuthServiceMethod({ serviceText, serviceLogo }: { serviceText: string, serviceLogo: string }) {
-    return (
-        <li>
-            <button type="button" className="flex items-center justify-center p-3 border border-neutral-800 space-x-2 w-full text-base font-medium text-white rounded-lg bg-black hover:bg-neutral-800 group shadow">
-                <Image src={serviceLogo} alt="" width={20} height={20} />
-                <span className="whitespace-nowrap">{serviceText || 'Error'}</span>
-            </button>
-        </li>
-    )
-}
 
 function LoginWithCredentials() {
     return (<div>credentials</div>);
@@ -47,7 +38,7 @@ function AuthFormView() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(true);
-        }, 1000);
+        }, 100);
 
         return () => clearTimeout(timer);
     }, []);
@@ -60,13 +51,13 @@ function AuthFormView() {
                     <div className="w-full max-w-80 space-y-6">
                         {!credentials && authEnabled && loading ? (
                             <>
-                                <ul className="space-y-2" onClick={() => setLoading(false)}>
+                                <ul className="space-y-2">
                                     {authMethod.filter((method) => method.serviceActive).map((method, index) => (
-                                        <AuthServiceMethod key={index} serviceText={method.serviceText} serviceLogo={method.serviceLogo} />
+                                        <ServiceAuth key={index} serviceLogo={method.serviceLogo} serviceText={method.serviceText} serviceDescription={method.serviceDescription} />
                                     ))}
                                 </ul>
                                 <span className="block w-full bg-neutral-300 h-[1px]"></span>
-                                <ul className="space-y-2" onClick={() => setLoading(true)}>
+                                <ul className="space-y-2">
                                     <li>
                                         <button type="button" onClick={() => setCredentials(true)} className="flex items-center justify-center p-3 border space-x-2 w-full text-base font-medium text-black rounded-lg bg-white hover:bg-neutral-50 group shadow">
                                             <TiLockClosedOutline width={20} height={20} />

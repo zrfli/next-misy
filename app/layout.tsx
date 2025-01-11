@@ -3,10 +3,10 @@ import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
-import { DashboardSideBar } from "@/components/(layouts)/(sidebar)/Sidebar";
-import Header from "@/components/(layouts)/Header";
-import AuthHeder from "@/components/(auth)/(layouts)/Header";
-import AuthFooter from "@/components/(auth)/(layouts)/Footer";
+import { DashboardSideBar } from "@/components/layouts/Sidebar/Sidebar";
+import Header from "@/components/layouts/Header";
+import AuthHeder from "@/components/auth/Layouts/Header";
+import AuthFooter from "@/components/auth/Layouts/Footer";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
