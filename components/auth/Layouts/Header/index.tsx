@@ -12,7 +12,7 @@ export default function AuthHeader() {
     },
     {
       name: 'Yardım',
-      link: 'payments'
+      link: '/'
     }
   ];
 
