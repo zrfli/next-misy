@@ -24,7 +24,7 @@ const QRCodeWithLogo = () => {
   );
 };
 
-export default function ServiceAuth({ serviceLogo, serviceText, serviceDescription }: ServiceProps ) {
+export function ServiceAuth({ serviceLogo, serviceText, serviceDescription }: ServiceProps ) {
   return (
     <Sheet>
       <SheetTrigger asChild>

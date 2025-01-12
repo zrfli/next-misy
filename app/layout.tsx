@@ -6,7 +6,6 @@ import "@/styles/globals.css";
 import { DashboardSideBar } from "@/components/layouts/Sidebar/Sidebar";
 import Header from "@/components/layouts/Header";
 import AuthHeder from "@/components/auth/Layouts/Header";
-import AuthFooter from "@/components/auth/Layouts/Footer";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -32,7 +31,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <AuthHeder />
           )}
           <main className={`${auth ? 'md:ml-64 mt-10' : ''}`}>{children}</main>
-          {!auth && <AuthFooter />}
         </ThemeProvider>
       </body>
     </html>
