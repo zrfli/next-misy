@@ -65,7 +65,7 @@ function AuthFormView() {
     }, []);
     
     return (
-        <div className="flex justify-center items-center w-full pt-24 md:pt-20 pb-20">
+        <div className="flex justify-center items-center w-full pt-20 pb-20">
             <div className="relative p-4 w-full max-w-md max-h-full">
                 <div className="flex flex-col justify-center items-center space-y-4">
                     <h1 className="text-3xl font-semibold text-neutral-900 text-center">Log in to Nisantasi University</h1>
