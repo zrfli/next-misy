@@ -1,7 +1,7 @@
 "use server";
 
 import { Navbar, NavbarContent, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
-import { Logo } from "@/components/logo";
+import { Logo } from "@/components/Logo";
 import { AvatarCard } from "@/components/layouts/Avatar";
 import Link from "next/link";
 

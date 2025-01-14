@@ -1,7 +1,7 @@
 "use client";
 
 import { Navbar, NavbarContent, NavbarMenuItem } from "@nextui-org/react";
-import { Logo } from "@/components/logo";
+import { Logo } from "@/components/Logo";
 import Link from "next/link";
 
 export default function AuthHeader() {

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { QRCodeCanvas } from 'qrcode.react';
-
 import {
   Sheet,
   SheetContent,
@@ -17,9 +16,11 @@ interface ServiceProps {
 }
 
 const QRCodeWithLogo = () => {
+  const random:string = Math.floor(Math.random() * 100).toString();
+
   return (
     <div className="relative" style={{ width: 150, height: 150 }}>
-      <QRCodeCanvas value="bb22a30b45417313f7630dde835412d2f9e63286c2fc0e86257d6012183f1f88" size={150} bgColor="#ffffff" fgColor="#000000" />
+      <QRCodeCanvas value={random} size={150} bgColor="#ffffff" fgColor="#000000" />
     </div>
   );
 };

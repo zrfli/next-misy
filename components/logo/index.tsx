@@ -9,7 +9,7 @@ interface LogoProps { LogoClass?: string }
 export function Logo({ LogoClass }: LogoProps) {
     return (
         <Link href="/" rel="noopener noreferrer">
-            <Image priority={true} className={LogoClass} src={LogoPath} height={400} width={400} alt="" />
+            <Image priority={true} className={LogoClass} src={LogoPath} height={282} width={137} alt="" />
         </Link>
     );
 }
