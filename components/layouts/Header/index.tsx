@@ -2,7 +2,7 @@
 
 import { Navbar, NavbarContent, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { Logo } from "@/components/Logo";
-import { AvatarCard } from "@/components/layouts/Avatar";
+import { AvatarCard } from "@/components/Layouts/Avatar";
 import Link from "next/link";
 
 export default async function DashboardHeader() {
