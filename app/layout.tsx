@@ -3,9 +3,9 @@ import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
-import { DashboardSideBar } from "@/components/layouts/Sidebar/Sidebar";
-import Header from "@/components/layouts/Header";
-import AuthHeder from "@/components/auth/Layouts/Header";
+import { DashboardSideBar } from "@/components/Layouts/Sidebar/Sidebar";
+import Header from "@/components/Layouts/Header";
+import AuthHeder from "@/components/Auth/Layouts/Header";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });

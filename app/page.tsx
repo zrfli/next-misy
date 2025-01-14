@@ -1,8 +1,8 @@
 "use server";
 
-import AuthForm from "@/components/auth/AuthForm";
+import AuthForm from "@/components/Auth/AuthForm";
 
-const auth = false;
+const auth:boolean = false;
 
 function AuthenticatedView() {
     return (
@@ -28,7 +28,7 @@ function Card({ title, description }: { title: string, description: string }) {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
 export default async function Main() {

@@ -1,6 +1,6 @@
 "use server"
 
-import { NoteDetails } from "@/components/layouts/sheets/NoteDetails"
+import { NoteDetails } from "@/components/Layouts/Sheets/NoteDetails"
 
 const notesData = [
   {

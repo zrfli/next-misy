@@ -1,7 +1,7 @@
 "use server"
 
 import Link from "next/link";
-import { DigitalCard } from "@/components/layouts/sheets/DigitalCard";
+import { DigitalCard } from "@/components/Layouts/Sheets/DigitalCard";
 import { AccordionMenu } from "../AccordionMenu";
 
 export async function DashboardSideBar() {
